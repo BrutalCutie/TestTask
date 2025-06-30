@@ -16,7 +16,7 @@ class Command(BaseCommand):
             'query': query,
             'resultset': 'catalog',
             'sort': 'popular',
-            'page': 1
+            'page': 0
         }
         response = requests.get(url, params=params)
         data = response.json()['data']['products']

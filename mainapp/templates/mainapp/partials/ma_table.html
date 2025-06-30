@@ -1,0 +1,32 @@
+<div class="product-table">
+    <table>
+        <thead>
+            <tr>
+                <th data-sort="name">Название
+                    {% if sort.by == 'name' %}{% if sort.order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}
+                </th>
+                <th data-sort="price">Цена
+                    {% if sort.by == 'price' %}{% if sort.order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}
+                </th>
+                <th>Цена со скидкой</th>
+                <th data-sort="rating">Рейтинг
+                    {% if sort.by == 'rating' %}{% if sort.order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}
+                </th>
+                <th data-sort="reviews_count">Отзывы
+                    {% if sort.by == 'reviews_count' %}{% if sort.order == 'asc' %}↑{% else %}↓{% endif %}{% endif %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }} ₽</td>
+                <td>{{ product.sale_price }} ₽</td>
+                <td>{{ product.rating }}</td>
+                <td>{{ product.reviews_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
