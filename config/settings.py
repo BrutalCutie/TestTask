@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "mainapp",
+    "analytics",
 
     'rest_framework',
     'django_filters',

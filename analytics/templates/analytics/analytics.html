@@ -1,9 +1,8 @@
 {% load static %}
-<!DOCTYPE html>
 <html>
 <head>
     <title>Аналитика товаров Wildberries</title>
-    <link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'analytics/css/style.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -11,18 +10,18 @@
         <h1>Аналитика товаров</h1>
         
         <!-- Фильтры -->
-        {% include 'mainapp/partials/ma_filters.html' %}
+        {% include 'analytics/partials/filters.html' %}
         
         <!-- Таблица товаров -->
-        {% include 'mainapp/partials/ma_table.html' %}
+        {% include 'analytics/partials/table.html' %}
         
         <!-- Графики -->
-        {% include 'mainapp/partials/ma_charts.html' %}
+        {% include 'analytics/partials/charts.html' %}
     </div>
 
-    <script src="{% static 'mainapp/js/filters.js' %}"></script>
-    <script src="{% static 'mainapp/js/sort.js' %}"></script>
-    <script src="{% static 'mainapp/js/charts.js' %}"></script>
+    <script src="{% static 'analytics/js/filters.js' %}"></script>
+    <script src="{% static 'analytics/js/sort.js' %}"></script>
+    <script src="{% static 'analytics/js/charts.js' %}"></script>
     
     <script>
         // Инициализация графиков
